@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { BoxType } from './types/BoxType';
 import { useDrop } from 'react-dnd';
 
@@ -11,10 +12,12 @@ const style = {
 
 type Props = {
     children: React.ReactNode;
-    onDrop?: (item: BoxType) => void
-}
+    onDrop?: (item: BoxType) => void;
+
+};
 
 export function BoxDroppable({ children, onDrop }: Props) {
+
     const [, dropRef] = useDrop({
         accept: 'box',
         drop(item: BoxType, monitor) {
@@ -33,4 +36,4 @@ export function BoxDroppable({ children, onDrop }: Props) {
             {children}
         </div>
     );
-};
+}
