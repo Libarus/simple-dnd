@@ -15,14 +15,6 @@ const initialBoxes: BoxType[] = [
 
 const initialBoxes2: BoxType[] = [{ id: 4, name: 'Item 4' }];
 
-const style = {
-    border: '1px solid gray',
-    padding: '0.5rem 1rem',
-    marginBottom: '.5rem',
-    backgroundColor: 'white',
-    cursor: 'move',
-};
-
 function App() {
     const [boxes, setBoxes] = useState<BoxType[]>(initialBoxes2);
     const [selectedBoxes, setSelectedBoxes] = useState<BoxType[]>(initialBoxes);

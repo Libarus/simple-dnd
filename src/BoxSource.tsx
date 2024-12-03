@@ -1,7 +1,5 @@
 import { useRef } from 'react';
-import { useDrag, useDrop } from 'react-dnd';
-import type { Identifier, XYCoord } from 'dnd-core';
-import { BoxType } from './types/BoxType';
+import { useDrag } from 'react-dnd';
 
 const style = {
     border: '1px solid gray',
@@ -17,8 +15,6 @@ type Props = {
 };
 
 export function BoxSource({ id, name }: Props) {
-    const ref = useRef<HTMLDivElement>(null);
-
     const [{ isDragging }, drag] = useDrag(() => ({
         type: 'box',
         item: { id },

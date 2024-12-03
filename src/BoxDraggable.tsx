@@ -1,7 +1,6 @@
 import { useRef } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import type { Identifier, XYCoord } from 'dnd-core';
-import { BoxType } from './types/BoxType';
 
 const style = {
     border: '1px solid gray',
